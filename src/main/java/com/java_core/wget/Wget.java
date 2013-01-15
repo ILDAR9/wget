@@ -68,8 +68,7 @@ class Wget {
 	}
 
 	private String getFileName(URL urlParser) {
-		// returns filename with extension, if not exists then folder
-		// and in the last case hostname
+		// returns filename with extension, if not exists then {siteIndex}.html
 		String path = urlParser.getFile();
 		if (path != null && !path.isEmpty() && !path.endsWith("/")) {
 			path = path.replace("\\", "/");
